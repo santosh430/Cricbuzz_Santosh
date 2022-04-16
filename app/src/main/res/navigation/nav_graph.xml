@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment"
+    >
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.cricbuzz_santosh.presentation.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_addPlayerFragment"
+            app:destination="@id/addPlayerFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_homeFragment_to_bowlerInfoFragment"
+            app:destination="@id/bowlerInfoFragment"
+            app:popUpToInclusive="true"
+            />
+        <action
+            android:id="@+id/action_homeFragment_to_batsmanInfoFragment"
+            app:destination="@id/batsmanInfoFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_homeFragment_to_favouritePlayerFragment"
+            app:destination="@id/favouritePlayerFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/addPlayerFragment"
+        android:name="com.example.cricbuzz_santosh.presentation.ui.addplayer.AddPlayerFragment"
+        android:label="fragment_add_player"
+        tools:layout="@layout/fragment_add_player" >
+        <action
+            android:id="@+id/action_addPlayerFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/bowlerInfoFragment"
+        android:name="com.example.cricbuzz_santosh.presentation.ui.bowler.BowlerInfoFragment"
+        android:label="fragment_bowler_info"
+        tools:layout="@layout/fragment_bowler_info" >
+        <action
+            android:id="@+id/action_bowlerInfoFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/batsmanInfoFragment"
+        android:name="com.example.cricbuzz_santosh.presentation.ui.batsman.BatsmanInfoFragment"
+        android:label="fragment_batsman_info"
+        tools:layout="@layout/fragment_batsman_info" >
+        <action
+            android:id="@+id/action_batsmanInfoFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/favouritePlayerFragment"
+        android:name="com.example.cricbuzz_santosh.presentation.ui.fav.FavouritePlayerFragment"
+        android:label="fragment_favourite_player"
+        tools:layout="@layout/fragment_favourite_player" >
+        <action
+            android:id="@+id/action_favouritePlayerFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/playerProfileFragment"
+        android:name="com.example.cricbuzz_santosh.presentation.ui.playerprofile.PlayerProfileFragment"
+        android:label="fragment_player_profile"
+        tools:layout="@layout/fragment_player_profile" >
+        <action
+            android:id="@+id/action_playerProfileFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+</navigation>

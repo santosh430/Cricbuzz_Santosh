@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.ui.playerprofile.PlayerProfileFragment"
+    >
+    <data>
+        <variable
+            name="dataBinding"
+            type="com.example.cricbuzz_santosh.presentation.ui.playerprofile.PlayerProfileFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="5dp"
+        android:id="@+id/playerProfile"
+        >
+
+       <com.google.android.material.appbar.AppBarLayout
+           android:layout_width="match_parent"
+           android:layout_height="100dp"
+           android:background="@color/green_content"
+           android:id="@+id/appBarPlayerProfile"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           >
+           <androidx.appcompat.widget.Toolbar
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               >
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <androidx.constraintlayout.utils.widget.ImageFilterView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:background="@drawable/arrow_back_24_white"
+                       android:id="@+id/iv_backArrow"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       android:layout_marginTop="3dp"
+                       />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="25dp"
+                       android:text="Player Name"
+                       android:id="@+id/playerName"
+                       android:textSize="20sp"
+                       app:layout_constraintStart_toEndOf="@id/iv_backArrow"
+                       app:layout_constraintTop_toTopOf="parent"
+                       android:layout_marginStart="15dp"
+                       android:drawablePadding="20dp"
+                       android:textColor="@color/white"
+                       />
+
+                   <androidx.constraintlayout.utils.widget.ImageFilterView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       android:layout_marginEnd="15dp"
+                       android:background="@drawable/ic_baseline_star_border_24"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       android:id="@+id/iv_notFavStar"
+                       android:visibility="invisible"
+                       />
+
+                   <androidx.constraintlayout.utils.widget.ImageFilterView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       android:layout_marginEnd="15dp"
+                       android:background="@drawable/ic_baseline_star_rate_24"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       android:visibility="invisible"
+                       android:id="@+id/iv_favStar"
+                       />
+
+               </androidx.constraintlayout.widget.ConstraintLayout>
+
+           </androidx.appcompat.widget.Toolbar>
+
+           <com.google.android.material.tabs.TabLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/tabLayout"
+               android:background="@color/green_content"
+               app:tabIndicatorGravity="bottom"
+               app:tabIndicatorFullWidth="false"
+               app:tabIndicatorColor="@color/white"
+               app:tabTextColor="@color/white"
+               app:tabPadding="12dp"
+
+               />
+
+       </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/appBarPlayerProfile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/vp_playerProfile"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
